@@ -1,0 +1,94 @@
+/* ボックスモデル */
+
+.box1 {
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+}
+
+.box2 {
+  background-color: skyblue;
+  width: 50%;
+  height: 50%;
+  overflow: scroll;
+  word-break: break-all;
+}
+
+.box3 {
+  background-color: tomato;
+}
+
+.box4 {
+  margin-top: 50px;
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+}
+
+.box5 {
+  margin-top: 10px;
+  background-color: skyblue;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+/* ボーダー */
+
+h1 {
+  background-color: skyblue;
+  width: 500px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box7 {
+  margin-top: 30px;
+  display: inline-block;
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  border: 5px groove;
+}
+
+.box8 {
+  display: inline-block;
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  border: 5px double;
+  margin-left: 20px;
+}
+
+.box9 {
+  display: inline-block;
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px 50%;
+  margin-left: 20px;
+}
+
+.box10 {
+  display: inline-block;
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  border: 5px dotted;
+  margin-left: 20px;
+}
+
+.box11 {
+  display: inline-block;
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  border: 5px dashed;
+  margin-left: 20px;
+}
+
+a {
+  margin-top: 30px;
+  display: block;
+}

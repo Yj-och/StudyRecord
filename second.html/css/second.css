@@ -1,0 +1,230 @@
+.box1 {
+  background-color: orange;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.rect {
+  width: 500px;
+  height: 100px;
+  background-color: yellowgreen;
+  position: absolute;
+  left: 350px;
+}
+
+.rect p {
+  position: relative;
+  top: -20px;
+  left: 30px;
+  font-size: 40px;
+}
+
+.fixed {
+  background-color: skyblue;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 30px;
+  left: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fixed p {
+  position: fixed;
+  top: 15px;
+  left: 103px;
+  color: gold;
+  -webkit-text-stroke: 0.5px rgb(5, 5, 5);
+}
+
+.box3 {
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.relative {
+  background-color: rgb(135, 83, 233);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 30px;
+  left: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.relative p {
+  position: relative;
+  top: 0px;
+  color: gold;
+  -webkit-text-stroke: 0.5px rgb(5, 5, 5);
+}
+
+.z-index {
+  background-color: yellowgreen;
+  width: 530px;
+  height: 80px;
+  position: relative;
+  left: 350px;
+  margin-bottom: 20px;
+}
+
+.z-index p {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+}
+
+.box10 {
+  background-color: rgb(156, 142, 223);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 200px;
+  z-index: 1;
+}
+
+.box11 {
+  background-color: rgb(255, 71, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+}
+
+.box12 {
+  background-color: rgb(252, 255, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: 3;
+}
+
+.box10 {
+  background-color: rgb(156, 142, 223);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 1;
+}
+
+.box11 {
+  background-color: rgb(255, 71, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+}
+
+.box12 {
+  background-color: rgb(252, 255, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: 3;
+}
+
+.box10 {
+  background-color: rgb(156, 142, 223);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 1;
+}
+
+.box11 {
+  background-color: rgb(255, 71, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+}
+
+.box12 {
+  background-color: rgb(252, 255, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: 3;
+}
+
+.box13 {
+  background-color: rgb(156, 142, 223);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 3;
+}
+
+.box14 {
+  background-color: rgb(255, 71, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+}
+
+.box15 {
+  background-color: rgb(252, 255, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: 1;
+}
+
+.box16 {
+  background-color: rgb(156, 142, 223);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 1;
+}
+
+.box17 {
+  background-color: rgb(255, 71, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 3;
+}
+
+.box18 {
+  background-color: rgb(252, 255, 71);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: 2;
+}

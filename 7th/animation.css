@@ -1,0 +1,395 @@
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(151, 146, 137);
+  transition-property: border-radius;
+  transition-duration: 1s;
+}
+
+.box p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box:hover {
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* ---------------------- */
+
+.box1 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.box1 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box1:hover {
+  transform: translate(50px, 20px);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box2 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(176, 209, 57);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.box2 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box2:hover {
+  transform: rotate(30deg);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box3 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(75, 27, 207);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.box3 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box3:hover {
+  transform: scale(.5, 1.5);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box4 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(110, 231, 85);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.box4 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box4:hover {
+  transform: translatex(100px) rotate(30deg);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box5 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(216, 81, 171);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.box5 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box5:hover {
+  transform: rotate(30deg) translatex(100px);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box6 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(99, 193, 230);
+  transition-property: transform;
+  transition-duration: 1s;
+  transform-origin: top left;
+}
+
+.box6 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box6:hover {
+  transform: rotate(30deg);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box7 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(216, 42, 42);
+  transition-property: transform;
+  transition-duration: 1s;
+  transform-origin: top left;
+}
+
+.box7 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box7:hover {
+  transform: scale(.5, 1.5);
+  opacity: 0.8;
+}
+
+/* ------------------------ */
+
+.box8 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(105, 92, 218);
+  transition-property: transform, background;
+  transition-duration: 1s;
+}
+
+.box8 p {
+  position: relative;
+  top: 20px;
+  left: 27px;
+}
+
+.box8:hover {
+  transform: translateX(30px);
+  background-color: rgb(110, 231, 85);
+  opacity: 0.8;
+}
+
+/* -------------------------------------------- */
+
+.box9 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(81, 212, 212);
+  animation-name: move;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+}
+
+.box9 p {
+  position: relative;
+  top: 35px;
+  left: 13px;
+}
+
+.box9:hover {
+  opacity: 0.8;
+}
+
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(300px) rotate(360deg);
+  }
+}
+
+/* -------------------------------------------- */
+
+.box10 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(211, 106, 202);
+  animation-name: move1;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+.box10 p {
+  position: relative;
+  top: 35px;
+  left: 13px;
+}
+
+.box10:hover {
+  opacity: 0.8;
+}
+
+@keyframes move1 {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(300px) rotate(360deg);
+  }
+}
+
+/* -------------------------------------------- */
+
+.box11 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background: rgb(165, 115, 23);
+  animation-name: move1;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+
+.box11 p {
+  position: relative;
+  top: 35px;
+  left: 13px;
+}
+
+.box11:hover {
+  opacity: 0.8;
+}
+
+@keyframes move1 {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(300px) rotate(360deg);
+  }
+}
+
+/* ------------------------------------- */
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #ccc;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin .8s infinite linear;
+}
+
+@keyframes spin {
+  /* 0% { */
+  from {
+    transform: none;
+  }
+  /* 100% { */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------------- */
+
+.loading1 {
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
+  border: 8px solid #ccc;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin1 1s infinite linear alternate-reverse;
+}
+
+@keyframes spin1 {
+  /* 0% { */
+  from {
+    transform: none;
+  }
+  /* 100% { */
+  to {
+    transform: translateX(250px) rotate(360deg);
+  }
+}
+
+.massege {
+  text-align: center;
+  width: 300px;
+  padding: 8px 16px;
+  background: #2c2c2c;
+  color: #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  animation: popup 3s forwards;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    transform: none;
+    opacity: 1;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.a {
+  margin-top: 50px;
+}

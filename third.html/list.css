@@ -1,0 +1,39 @@
+.class1 {
+  list-style: lower-alpha;
+  background-color: gold;
+}
+
+.class2 {
+  list-style: circle;
+  background-color: rgb(70, 207, 70);
+}
+
+.class3 {
+  list-style: square;
+  background-color: hotpink;
+}
+
+.class4 {
+  list-style: url(../img/icon.png);
+  background-color: rgb(164, 97, 212);
+}
+
+.class5 {
+  list-style: decimal;
+  background-color: lightseagreen;
+}
+
+.class6 {
+  list-style: katakana-iroha;
+  background-color: rgb(224, 84, 84);
+}
+
+.class7 {
+  list-style-type: lower-roman;
+  background-color: skyblue;
+}
+
+.class8 {
+  list-style-type: lower-greek;
+  background-color: rgb(231, 96, 209);
+}
