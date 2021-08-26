@@ -11,17 +11,34 @@
 </head>
 
 <body>
-<nav class="nav">
-  <li ><a href=""class="li">***</a></li>
-  <li ><a href=""class="li">***</a></li>
-  <li ><a href=""class="li">***</a></li>
-</nav>
-<ul>
+  <div id="open">
+    詳細を見る
+  </div>
+  <div id="mask" class="hidden"></div>
+  <section id="modal" class="hidden">
+    <p>
+      こんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
+    </p>
+    <div id="close">閉じる</div>
+  </section>
 
-</ul>
+  <!-- ---------------------------- -->
+  <nav class="nav1">
+    <button id="my-red" class="red">赤背景</button>
+    <button id="my-blue" class="blue">青背景</button>
+    <button id="my-gold" class="gold">黄背景</button>
+  </nav>
   <!-- 星の背景 部品-->
   <div class="container">
-    <h1 class="StudyRecord">Welcome</h1>
+    <h1 class="StudyRecord">
+      <div class="div1">W</div>
+      <div class="div2">e</div>
+      <div class="div3">l</div>
+      <div class="div4">c</div>
+      <div class="div5">o</div>
+      <div class="div6">m</div>
+      <div class="div7">e</div>
+    </h1>
     <div class="stars s">
       <p></p>
       <p></p>
@@ -62,19 +79,108 @@
 
   <!-- CSSリンク -->
   <h1 data-title="Lesson- " class="CSS">CSS</h1>
-<div class="links">
+  <section class="carousel">
+    <div class="container1">
+    <ul>
+      <li><img src="img/green:calc.jpg"  ></li>
+      <li><img src="img/orange:animation.jpg"  ></li>
+      <li><img src="img/pink:flexbox.jpg" ></li>
+      <li><img src="img/black:shadow.jpg" ></li>
+      <li><img src="img/blue:position.jpg" ></li>
+      <li><img src="img/yellow:border.jpg" ></li>
+      <li><img src="img/red:List.jpg" ></li>
+    </ul>
+    <button id="prev">&laquo;</button>
+    <button id="next">&raquo;</button>
+    </div>
 
-  <a href="second.html/position.html" class="link">position関連</a>
-  <a href="third.html/third.html" class="link">list関連</a>
-  <a href="3th/3th.html" class="link">border/hidden関連</a>
-  <a href="4th/4th.html" class="link">calc関連</a>
-  <a href="5th/5th.html" class="link">shadow関連</a>
-  <a href="6th/6th.html" class="link">flexbox関連</a>
-  <a href="7th/7th.html" class="link">animation関連</a>
-</div>
+    <nav id="nav">
+      <!-- <button></button>
+      <button></button>
+      <button class="current"></button> -->
+    </nav>
+  </section>
+  <!-- ------------リンク集---------------- -->
+  <!-- <div class="links">
+    <a href="third.html/third.html" class="link">list関連</a>
+    <a href="3th/3th.html" class="link">border/hidden関連</a>
+    <a href="4th/4th.html" class="link">calc関連</a>
+    <a href="5th/5th.html" class="link">shadow関連</a>
+    <a href="6th/6th.html" class="link">flexbox関連</a>
+    <a href="7th/7th.html" class="link">animation関連</a>
+    <a href="second.html/position.html" class="link">Position</a> -->
+  <!-- </div> -->
+
+<!-- /* ------------箱パーツ---------- */ -->
+  <!-- <section class="hako">
+    <p>Animation</p>
+    <div class="ten"></div>
+    <div class="ten"></div>
+  </section> -->
 
 
-  <!-- <p>Tokyo <img src="img/japan.png"> Japan</p> -->
+  <!-- JavaScript -->
+  <h1 data-title="Lesson- " class="JavaScript">JavaScript</h1>
+  <a href="/8th/8th.html">JavaScript</a>
+
+  <div class="accordion" id="js-faq">
+    <p class="accordion-trigger">
+      Q1.人生に疲れたんですが、どうしたらいいですか？
+    </p>
+    <div class="accordion-contents">
+      A1.寝ろ
+    </div>
+    <br>
+    <p class="accordion-trigger">
+      Q2.バナナはおやつに入りますか？
+    </p>
+    <div class="accordion-contents">
+      A2.グレーです。
+      より安全に事を進めるのであれば、バナナはカットして弁当箱に入れ、キャベツやトマトなどの野菜も同時に入れておくのです。<br>
+      そうすれば、最悪「これはサラダです」という言い訳が成立します。（フルーツサラダ）
+    </div>
+  </div>
+
+  <br>
+
+  <div class="accordion" id="js-accordion">
+    <a href="" class="accordion-trigger">
+      Q1.あああああ
+    </a>
+    <div class="accordion-contents">
+      A1.ああああああ
+    </div>
+    <br>
+
+    <a href="" class="accordion-trigger">
+      Q2.いいいいいい
+    </a>
+    <div class="accordion-contents">
+      A2.いいいいいい
+    </div>
+    <br>
+
+    <a href="" class="accordion-trigger">
+      Q3.うううううう
+    </a>
+    <div class="accordion-contents">
+      A3.うううううう
+    </div>
+  </div>
+
+  <br>
+
+  <dl class="accordion" id="js-accordion-mini">
+    <dt class="accordion-trigger">
+      Q1.あああああ
+    </dt>
+    <dd class="accordion-contents">
+      A1.ああああああ
+    </dd>
+  </dl>
+  </div>
+  </div>
+
 
 
 
