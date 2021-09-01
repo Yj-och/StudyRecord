@@ -1,35 +1,109 @@
 @charset "utf-8";
+/* common */
+
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: rgb(240, 245, 240);
-  height: 3000px;
-  max-width: 1000px;
+  max-width: 23em;
+  min-width: 375px;
 }
 
-.red {
-  background-color: red;
+/* -----------ハンバーガー--------------- */
+
+header {
+  display: flex;
+  padding: 0 16px;
+  background-color: rgb(15, 15, 15);
 }
 
-.blue {
-  background-color: blue;
+.sp-menu {
+  margin-left: auto;
 }
 
-.gold {
-  background-color: gold;
+.sp-menu #materialOpen {
+  font-size: 32px;
+  /* line-height: 64px; */
+  cursor: pointer;
+  color: azure;
+  margin-top: 10px;
+}
+
+.sp-menu #materialOpen.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+  transition: opacity .7S;
+}
+
+.MenuNav {
+  margin: 0;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #materialclose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ol {
+  list-style-type: none;
+}
+
+.overlay li {
+  margin: 20% 30% 0 0;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .1s, transform .7s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .5s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .7s;
 }
 
 /* ------------モーダル部品--------------- */
 
 #open, #close {
-  font-size: 14px;
+  font-size: 1em;
   cursor: pointer;
-  width: 200px;
-  border: 1px solid #ccc;
+  width: 10em;
+  border: 3px solid rgb(14, 13, 13);
   border-radius: 4px;
   text-align: center;
   padding: 12px;
-  margin: 16px auto 0;
+  margin: 16px auto 20px;
 }
 
 #mask {
@@ -39,11 +113,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 #modal {
-  background: #fff;
-  width: 300px;
+  background: linear-gradient(to bottom, #00cbd9 0%, #beff44 100%);
+  animation: huerotator 3s infinite alternate;
+  width: 15em;
   padding: 20px;
   border-radius: 4px;
   position: absolute;
@@ -52,11 +128,22 @@ body {
   right: 0;
   margin: 0 auto;
   transition: transform 0.5s;
-  z-index: 1;
+  z-index: 3;
+}
+
+@keyframes huerotator {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 #modal>p {
-  margin: 0 0 20px;
+  text-align: center;
+  text-decoration: wavy underline;
+line-height: 3em;
 }
 
 #mask.hidden {
@@ -67,16 +154,22 @@ body {
   transform: translate(0, -500px);
 }
 
-/* 星の背景 部品 */
+/* ---------星の背景 部品 ----------*/
+
+div.container {
+  width: 23em;
+  height: 190px;
+  margin: -20px 0 0 3px;
+}
 
 h1.StudyRecord {
   color: #FFF;
-  font-size: 100px;
+  font-size: 4em;
   font-family: 'Apple Chancery', sans-serif;
   display: flex;
   position: relative;
-  top: 13%;
-  left: 32%;
+  top: 20%;
+  left: 15%;
   letter-spacing: 8px;
 }
 
@@ -127,29 +220,6 @@ h1.StudyRecord {
     opacity: 1;
   }
 }
-
-/* -------背景チェンジボタン部品------ */
-
-.nav1 {
-  list-style: none;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-top: 0;
-  cursor: pointer;
-}
-
-.li {
-  display: block;
-  width: 100px;
-  text-decoration: none;
-  background-color: rgb(226, 25, 25);
-}
-
-li:hover {
-  opacity: 0.5;
-}
-
-/* 星の部品 */
 
 .container {
   position: relative;
@@ -371,27 +441,28 @@ li:hover {
   animation-delay: 1s;
 }
 
-.CSS {
-  padding: 30px;
+/* ----------------------タイトル---------------------------- */
+
+.CSS, .JavaScript {
+  padding: 20px;
   background: linear-gradient(transparent 70%, #99ccff);
   font-family: 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
+  font-size: 1em;
 }
 
-/* ---------------タイトル部品------------ */
+.JavaScript {
+  background: linear-gradient(transparent 70%, #60f06c);
+}
 
 h1::before {
   content: attr(data-title);
 }
 
-/* --------------カルーセル部品------------------------ */
+/* ----------カルーセル部品---------------- */
 
-.carousel {
+.carouselContainer {
+  height: 200px;
   width: 100%;
-}
-
-.container1 {
-  height: 450px;
-  /* outline: 8px solid red; */
   overflow: hidden;
   position: relative;
 }
@@ -400,36 +471,127 @@ ul {
   display: flex;
   list-style: none;
   transition: transform .8s;
+  position: absolute;
+}
+
+#js-TagId, #js-TagIdSecond {
+  display: flex;
+  list-style: none;
+  transition: transform .8s;
+  position: absolute;
 }
 
 ul img {
-  height: 100%;
-  width: 270px;
-  /* margin: 0 auto; */
-  margin: 30px 50px 0;
+  height: 20vh;
+  width: 10em;
+  margin: 10px 70px 0 50px;
 }
 
-#prev, #next {
+#prev, #next, #prevCarousel, #nextCarousel {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: none;
   background: rgba(0, 0, 0, .8);
   color: #fff;
-  font-size: 36px;
+  font-size: 30px;
   padding: 0 8px 4px;
   cursor: pointer;
 }
 
-#prev:hover, #next:hover {
+.link {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  bottom: 0;
+}
+
+[href*="7th"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 390px;
+  bottom: 0;
+}
+
+[href*="6th"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 670px;
+  bottom: 0;
+}
+
+[href*="5th"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 950px;
+  bottom: 0;
+}
+
+[href*="second"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 1227px;
+  bottom: 0;
+}
+
+[href*="3th"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 1510px;
+  bottom: 0;
+}
+
+[href*="third"] {
+  /* background-color: rgb(225, 236, 161);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 1790px;
+  bottom: 0;
+}
+
+#prev:hover, #next:hover #prevCarousel:hover, #nextCarousel:hover {
   opacity: 0.7;
 }
 
-#prev {
+#prev, #prevCarousel {
   left: 0px;
 }
 
-#next {
+#next, #nextCarousel {
   right: 0px;
 }
 
@@ -437,13 +599,21 @@ ul img {
   display: none;
 }
 
-nav,#nav {
-  margin-left:50%;
-
+nav, #nav {
+  margin-left: 24%;
 }
 
-#nav button {
-  margin-right: 10px;
+#js-nav {
+  margin-left: 37%;
+}
+
+nav {
+  margin: 10px 30px 0;
+  height: 16px;
+}
+
+#nav button, #js-nav button {
+  margin-right: 15px;
   border: none;
   width: 16px;
   height: 16px;
@@ -452,104 +622,47 @@ nav,#nav {
   cursor: pointer;
 }
 
-#nav >.current {
+#nav>.current, #js-nav>.current {
   background: rgb(88, 87, 87);
 }
 
-/* -------------------------------------- */
-
-/* [href^="second"] {
-  margin-left: 30px;
-} */
-
-/* a {
-  display: inline-block;
-  margin: 10px;
-  /* background-color: yellowgreen; */
-
-/* cursor: pointer;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-} */
-
-/* a:hover {
-  opacity: 0.5;
-} */
-
-/* .links {
+[href*="omikuji"] {
+  /* background-color: rgb(232, 241, 191);
+  opacity: 0.7; */
   display: block;
-  height: 300px;
-  padding: 10px; */
-
-/* ------------箱パーツ---------- */
-
-/* .ten {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  border-radius: 50%;
-  position: relative;
-  top: -157px;
-  left: 149px;
-} */
-
-/* section.hako { */
-
-/* 箱部品 */
-
-/* margin: 0 0 0 50px;
-  width: 220px;
-  height: 250px;
-  background-color: rgb(241, 237, 237);
-  border-radius: 10%;
-  border-top: 40px solid rgb(230, 146, 20);
-  border-left: 20px solid rgb(230, 210, 180);
-  border-right: 20px solid rgb(230, 210, 180);
-  border-bottom: 30px solid rgb(230, 146, 20);
-  box-sizing: border-box;
-  box-shadow: -6px -5px 8px grey;
-} */
-
-/* section.hako>a { */
-
-/* リンクを貼るための部品 */
-
-/* display: block;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  top: -159px;
-  width: 100%;
-  height: 100%; */
-
-/* background-color: rgb(204, 20, 134); */
-
-/* } */
-
-/* section.hako>p {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 60px;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 107px;
+  bottom: 0;
 }
 
-.hako>a:hover {
-  opacity: 0.5;
-} */
+[href*="8th"] {
+  /* background-color: rgb(232, 241, 191);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 390px;
+  bottom: 0;
+}
 
-/* -------------JavaScript-------------- */
+[href*="9th"] {
+  /* background-color: rgb(232, 241, 191);
+  opacity: 0.7; */
+  display: block;
+  width: 8em;
+  height: 115px;
+  position: absolute;
+  top: 40px;
+  left: 670px;
+  bottom: 0;
+}
 
 /* アコーディオン */
-
-.JavaScript {
-  padding: 30px;
-  font-family: 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
-  background: linear-gradient(transparent 70%, #ec7ede);
-}
 
 .acoordion {
   width: 500px;
@@ -557,12 +670,13 @@ nav,#nav {
 }
 
 .accordion-trigger {
-  margin: 0;
+  margin-top: 10px;
   padding: 10px;
   display: block;
-  background-color: #333;
+  background: #1d1c1c ;
   color: #FFF;
-  border: 1px solid #000;
+  border: 1px solid rgb(2, 2, 2);
+  text-decoration: none;
 }
 
 .accordion-contents {
@@ -572,4 +686,330 @@ nav,#nav {
   display: none;
 }
 
-/* ---------------------------------------- */
+/* ----------------600px----------------------- */
+
+@media (min-width:600px) {
+  body {
+    max-width: 1000px;
+  }
+  /* ---------ハンバーガーメニュー */
+  .material-icons {
+    margin-right: 10px;
+  }
+  .overlay li {
+    margin: 10% 15% 0 0;
+  }
+  /* ---------星部品 */
+  div.container {
+    width: 100%;
+    height: 300px;
+    margin: -30px 0 0 3px;
+  }
+  h1.StudyRecord {
+    margin-left:3%;
+    font-size: 7em;
+    position: relative;
+    top: 10%;
+    left: 20%;
+  }
+  /* ---------タイトル */
+  .CSS, .JavaScript {
+    padding: 30px;
+    font-size: 2em;
+  }
+  /* ---------カルーセル */
+  .carouselContainer {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  ul img {
+    height: 25vh;
+    width: 12em;
+    margin: 10px 100px 0 50px;
+  }
+  nav, #nav, #js-nav {
+    margin-left: 37%;
+  }
+  #nav button, #js-nav button {
+    margin-right: 20px;
+  }
+  /* --------カルーセルリンク */
+  .link {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 110px;
+  }
+  [href*="7th"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 450px;
+  }
+  [href*="6th"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 800px;
+  }
+  [href*="5th"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 1140px;
+  }
+  [href*="second"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 1475px;
+  }
+  [href*="3th"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 1830px;
+  }
+  [href*="third"] {
+    width: 10em;
+    height: 140px;
+    position: absolute;
+    top: 45px;
+    left: 2160px;
+  }
+  nav, #nav {
+    margin: 0 0 5% 30%;
+  }
+  #js-nav {
+    margin: 0 0 5% 40%;
+  }
+  #nav button, #js-nav button {
+    margin-right: 30px;
+  }
+  [href*="omikuji"] {
+    display: block;
+    width: 10em;
+    height: 150px;
+    position: absolute;
+    top: 40px;
+    left: 107px;
+  }
+  [href*="8th"] {
+    display: block;
+    width: 10em;
+    height: 150px;
+    position: absolute;
+    top: 40px;
+    left: 450px;
+  }
+  [href*="9th"] {
+    display: block;
+    width: 10em;
+    height: 150px;
+    position: absolute;
+    top: 40px;
+    left: 790px;
+  }
+}
+
+/* ----------------1024px----------------------- */
+
+@media(min-width:1024px) {
+  #open, #close {
+    font-size: 1em;
+    width: 15em;
+  }
+  #modal>p {
+    margin: 0 0 20px;
+    width: 20em;
+  }
+  #modal {
+    width: 20em;
+  }
+  .overlay li {
+    margin: 10% 10% 0 0;
+  }
+  /* ---------星部品 */
+  div.container {
+    height: 400px;
+  }
+  h1.StudyRecord {
+    font-size: 10em;
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  /* ---------タイトル */
+  .CSS, .JavaScript {
+    padding: 40px;
+    font-size: 3em;
+  }
+  /* ---------カルーセル */
+  .carouselContainer {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  ul img {
+    height: 30vh;
+    width: 14em;
+    margin: 10px 100px 0 50px;
+  }
+  nav, #nav, #js-nav {
+    margin-left: 37%;
+  }
+  nav {
+    margin: 50px 50px 0;
+  }
+  #nav button, #js-nav button {
+    margin-right: 30px;
+  }
+  /* --------カルーセルリンク */
+  .link {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 116px;
+  }
+  [href*="7th"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 488px;
+  }
+  [href*="6th"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 860px;
+  }
+  [href*="5th"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 1235px;
+  }
+  [href*="second"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 1610px;
+  }
+  [href*="3th"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 1985px;
+  }
+  [href*="third"] {
+    width: 11em;
+    height: 20vh;
+    position: absolute;
+    top: 55px;
+    left: 2360px;
+  }
+  nav, #nav {
+    margin: 5% 0 5% 40%;
+  }
+  #js-nav {
+    margin: 5% 0 5% 50%;
+  }
+  #nav button, #js-nav button {
+    margin-right: 30px;
+  }
+  [href*="omikuji"] {
+    width: 11em;
+    height: 22vh;
+    position: absolute;
+    top: 40px;
+    left: 115px;
+  }
+  [href*="8th"] {
+    width: 11em;
+    height: 22vh;
+    position: absolute;
+    top: 40px;
+    left: 485px;
+  }
+  [href*="9th"] {
+    width: 11em;
+    height: 22vh;
+    position: absolute;
+    top: 40px;
+    left: 860px;
+  }
+}
+
+/* ------------箱パーツ---------- */
+
+/* .ten {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(247, 239, 239);
+  border-radius: 50%;
+  position: relative;
+  top: -245px;
+  left: 149px;
+} */
+
+/* 箱部品 */
+
+/* section.hako {
+  margin: 0 0 0 50px;
+  width: 220px;
+  height: 250px;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  border-radius: 10%;
+  border-top: 40px solid rgb(2, 2, 2);
+  border-left: 20px solid rgb(2, 2, 2);
+  border-right: 20px solid rgb(2, 2, 2);
+  border-bottom: 30px solid rgb(2, 2, 2);
+  box-sizing: border-box;
+  box-shadow: -6px -5px 8px grey;
+}
+
+section.hako>p {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+.wwww{
+height: 180px;
+width: 180px;
+margin-top: -60px;
+} */
+
+/* リンクを貼るための部品 */
+
+/* section.hako>a {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  top: -159px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(204, 20, 134);
+} */

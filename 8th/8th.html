@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>DOM</title>
-    <style>
-      .my-color {
-        color: red;
-        background-color: skyblue;
-      }
-
-      .my-border {
-        border-bottom: 4px solid orange;
-      }
-    </style>
+<link rel="icon" href="../img/learning.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<input type="text">
-  <button>ADD</button>
-<ul></ul>
-<!-- <h1 id="target" class="my-border">aaaaaa</h1>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p> -->
+    <!-- ---------------------------- -->
+    <nav class="nav1">
+      <button id="my-red" class="red">赤背景</button>
+      <button id="my-blue" class="blue">青背景</button>
+      <button id="my-gold" class="gold">黄背景</button>
+    </nav>
+  <!-- input -->
+  <h1>input部品</h1>
+  <p>打ち消し線も入ります</p>
+  <input type="text">
+  <button id="btn1">ADD</button>
+  <ul></ul>
+  <!-- select Box -->
+  <h1>select Box部品</h1>
+  <select>
+    <option value="red">赤</option>
+    <option value="blue">青</option>
+    <option value="yellow">黄</option>
+  </select>
+  <button id="selectButton">Add</button>
+
+  <ul id="ul2">
+  </ul>
+  <!-- ----------------raidio Button---------------- -->
+  <h1>raidio Button部品</h1>
+  <input type="radio" name="color" value="red" id="input"> 赤
+  <input type="radio" name="color" value="blue" id="input"> 青
+  <input type="radio" name="color" value="yellow" id="input"> 黄
+  <button id="btn2">Add</button>
+
+  <ul id="ul3">
+  </ul>
+  <!-- ----------------check Box---------------- -->
+  <h1>check Box部品</h1>
+  <input type="checkbox" value="red" id="checkbox"> 赤
+  <input type="checkbox" value="blue" id="checkbox"> 青
+  <input type="checkbox" value="yellow" id="checkbox"> 黄
+  <button id="btn4">Add</button>
+
+  <ul id="ul4"></ul>
 
 
-<!-- <ul>
-<li>item 0</li>
-<li>item 1</li>
-<li>item 2</li>
-</ul> -->
-<a href="../index.html">HOME</a>
-
-
-<script src="8th.js"></script>
+  <a href="../index.html">HOME</a>
+  <script src="8th.js"></script>
 </body>
+
 </html>

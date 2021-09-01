@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/open-book.png">
   <title>Study</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,19 +17,35 @@
   </div>
   <div id="mask" class="hidden"></div>
   <section id="modal" class="hidden">
-    <p>
-      こんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
+    <p>このページは<br>
+       <b>レスポンシブデザイン</b><br>
+        になっています
     </p>
     <div id="close">閉じる</div>
   </section>
+  <!-- --------------ハンバーガー------------ -->
+  <header>
+    <div class="logo">
+      <div class="box11">
 
-  <!-- ---------------------------- -->
-  <nav class="nav1">
-    <button id="my-red" class="red">赤背景</button>
-    <button id="my-blue" class="blue">青背景</button>
-    <button id="my-gold" class="gold">黄背景</button>
-  </nav>
-  <!-- 星の背景 部品-->
+      </div>
+    </div>
+    <div class="sp-menu">
+      <span class="material-icons" id="materialOpen">menu</span>
+    </div>
+  </header>
+  <div class="overlay">
+    <span class="material-icons" id="materialclose">close</span>
+    <nav class="MenuNav">
+      <ol>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- 星背景 部品-->
   <div class="container">
     <h1 class="StudyRecord">
       <div class="div1">W</div>
@@ -79,119 +96,106 @@
 
   <!-- CSSリンク -->
   <h1 data-title="Lesson- " class="CSS">CSS</h1>
-  <section class="carousel">
-    <div class="container1">
-    <ul>
-      <li><img src="img/green:calc.jpg"  ></li>
-      <li><img src="img/orange:animation.jpg"  ></li>
-      <li><img src="img/pink:flexbox.jpg" ></li>
-      <li><img src="img/black:shadow.jpg" ></li>
-      <li><img src="img/blue:position.jpg" ></li>
-      <li><img src="img/yellow:border.jpg" ></li>
-      <li><img src="img/red:List.jpg" ></li>
-    </ul>
-    <button id="prev">&laquo;</button>
-    <button id="next">&raquo;</button>
+
+  <!-- カルーセル部品 -->
+  <section>
+    <div class="carouselContainer">
+      <ul id="js-TagId">
+        <li><img src="img/green:calc.jpg"><a href="4th/4th.html" class="link" target="_blank"></a></li>
+        <li><img src="img/orange:animation.jpg"><a href="7th/7th.html" target="_blank"></a></li>
+        <li><img src="img/pink:flexbox.jpg"><a href="6th/6th.html" target="_blank"></a></li>
+        <li><img src="img/black:shadow.jpg"><a href="5th/5th.html" target="_blank"></a></li>
+        <li><img src="img/blue:position.jpg"><a href="second.html/position.html" target="_blank"></a></li>
+        <li><img src="img/yellow:border.jpg"><a href="3th/3th.html" target="_blank"></a></li>
+        <li><img src="img/red:List.jpg"><a href="third.html/third.html" target="_blank"></a></li>
+      </ul>
+      <button id="prev">&laquo;</button>
+      <button id="next">&raquo;</button>
     </div>
 
-    <nav id="nav">
-      <!-- <button></button>
-      <button></button>
-      <button class="current"></button> -->
-    </nav>
+    <nav id="nav"></nav>
   </section>
-  <!-- ------------リンク集---------------- -->
-  <!-- <div class="links">
-    <a href="third.html/third.html" class="link">list関連</a>
-    <a href="3th/3th.html" class="link">border/hidden関連</a>
-    <a href="4th/4th.html" class="link">calc関連</a>
-    <a href="5th/5th.html" class="link">shadow関連</a>
-    <a href="6th/6th.html" class="link">flexbox関連</a>
-    <a href="7th/7th.html" class="link">animation関連</a>
-    <a href="second.html/position.html" class="link">Position</a> -->
-  <!-- </div> -->
-
-<!-- /* ------------箱パーツ---------- */ -->
-  <!-- <section class="hako">
-    <p>Animation</p>
-    <div class="ten"></div>
-    <div class="ten"></div>
-  </section> -->
 
 
   <!-- JavaScript -->
-  <h1 data-title="Lesson- " class="JavaScript">JavaScript</h1>
-  <a href="/8th/8th.html">JavaScript</a>
 
-  <div class="accordion" id="js-faq">
-    <p class="accordion-trigger">
-      Q1.人生に疲れたんですが、どうしたらいいですか？
-    </p>
-    <div class="accordion-contents">
-      A1.寝ろ
-    </div>
-    <br>
-    <p class="accordion-trigger">
-      Q2.バナナはおやつに入りますか？
-    </p>
-    <div class="accordion-contents">
-      A2.グレーです。
-      より安全に事を進めるのであれば、バナナはカットして弁当箱に入れ、キャベツやトマトなどの野菜も同時に入れておくのです。<br>
-      そうすれば、最悪「これはサラダです」という言い訳が成立します。（フルーツサラダ）
-    </div>
+  <h1 data-title="Lesson- " class="JavaScript">JavaScript</h1>
+<!-- --------------------------------- -->
+<section>
+  <div class="carouselContainer">
+    <ul id="js-TagIdSecond">
+      <li><img src="img/おみくじ.jpg"><a href="../omikuji/index.html" target="_blank"></a> </li>
+      <li><img src="img/クリックイベント.jpg"><a href="8th/8th.html" target="_blank"></a> </li>
+      <li><img src="img/スロット.jpg"><a href="9th/9th.html" target="_blank"></a></li>
+    </ul>
+
+    <button id="nextCarousel">&raquo;</button>
+    <button id="prevCarousel">&laquo;</button>
   </div>
 
-  <br>
+  <nav id="js-nav"></nav>
+</section>
+
+<!------------アコーディオン--------->
+  <div class="accordion" id="js-faq">
+    <p class="accordion-trigger">
+      Q1. このサイトはなんですか　　　　＋
+    </p>
+    <div class="accordion-contents">
+      A1. アウトプットを目的とした練習の場です。特にコンセプトや意図はありません。
+    </div>
+
+    <p class="accordion-trigger">
+      Q2. 週何時間勉強してますか　　　　＋
+    </p>
+    <div class="accordion-contents">
+      A2. 25〜40時間です。休みは全て勉強に宛て、仕事終わりの時間や朝4時か５時には起きて出勤前に時間を確保しています。
+    </div>
+  </div>
 
   <div class="accordion" id="js-accordion">
     <a href="" class="accordion-trigger">
-      Q1.あああああ
+      Q3. 使っている言語はなんですか　　＋
     </a>
     <div class="accordion-contents">
-      A1.ああああああ
+      A3. HTML CSS JavaScript PHP MySQL Lalavel です。
     </div>
-    <br>
+
 
     <a href="" class="accordion-trigger">
-      Q2.いいいいいい
+      Q4. 大変なところはどこですか　　　＋
     </a>
     <div class="accordion-contents">
-      A2.いいいいいい
+      A4. その時点で勉強したものを入れていくのですが、その都度教材と違うようにしないといけませんので創意工夫が必要なり、そこが大変ではありますが質の良い勉強となっています。
     </div>
-    <br>
+
 
     <a href="" class="accordion-trigger">
-      Q3.うううううう
+      Q5. どのように勉強していますか　　＋
     </a>
     <div class="accordion-contents">
-      A3.うううううう
+      A5. 実践的にコードを打ちまくった方が性に合っていると気づいてからはこのHP作りを中心に基礎から応用できないか考え、思いついたことを実現でいるよう調べながらやっています。それまでは全てを記憶しようとしていて何度も同じ基礎学習を繰り返しており効率はあまり良くありませんでしたが、自分の根幹を支える基盤にはなったかと思います。
     </div>
   </div>
 
-  <br>
-
   <dl class="accordion" id="js-accordion-mini">
     <dt class="accordion-trigger">
-      Q1.あああああ
+      Q6. バナナはおやつに入りますか　　＋
     </dt>
     <dd class="accordion-contents">
-      A1.ああああああ
+      A6. グレーです。
+      遠足などで安全に言い訳するのであれば、バナナはカットして弁当箱に入れ、キャベツやトマトなどの野菜も同時に入れて下さい。<br>
+      そうすれば、「これはサラダです」という言い訳が成立します。
     </dd>
   </dl>
   </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- /* ---------箱パーツ---------- */ -->
+  <!-- <section class="hako">
+    <p><img src="img/slot.jpg" class="wwww"alt=""></p>
+    <div class="ten"></div>
+    <div class="ten"></div>
+  </section> -->
 
   <script src="js/main.js"></script>
 </body>

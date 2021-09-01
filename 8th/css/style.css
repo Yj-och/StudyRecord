@@ -1,0 +1,28 @@
+.red {
+  background-color: rgb(240, 116, 116);
+}
+
+.blue {
+  background-color: rgb(115, 115, 236);
+}
+
+.gold {
+  background-color: rgb(238, 222, 134);
+}
+
+.my-color {
+  color: red;
+  background-color: skyblue;
+}
+
+.my-border {
+  border-bottom: 4px solid orange;
+}
+
+li {
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
